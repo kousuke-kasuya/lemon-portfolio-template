@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- =====================
+       ページタイトル（ブラウザのタブに表示される）
+       ↓ ここを自分の名前に変えてね
+       ===================== -->
+  <title>山田 太郎 | Portfolio</title>
+  <!-- ↑ ここを変えてね -->
+
+  <!-- Google Fonts の読み込み -->
+  <!-- Cormorant Garamond：英語の大きい見出し用のエレガントなフォント -->
+  <!-- Noto Sans JP：日本語も表示できる読みやすいフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600;1,700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- スタイルシートの読み込み（css/style.css を編集してデザインを変える） -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =====================
+       ヘッダー / ナビゲーション
+       スクロールすると背景が出る（js/main.js が担当）
+       ===================== -->
+  <header class="header" id="header">
+    <nav class="nav">
+
+      <!-- ロゴ（イニシャル2文字。例：山田太郎→ TY） -->
+      <!-- ↓ ここを自分のイニシャルに変えてね -->
+      <a href="#" class="nav__logo">TY</a>
+      <!-- ↑ ここを変えてね -->
+
+      <!-- ナビゲーションメニュー（クリックするとそのセクションに飛ぶ） -->
+      <ul class="nav__menu">
+        <li><a href="#about"   class="nav__link">About</a></li>
+        <li><a href="#skills"  class="nav__link">Skills</a></li>
+        <li><a href="#works"   class="nav__link">Works</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- =====================
+       Hero セクション
+       一番最初に見えるメインビジュアル
+       ===================== -->
+  <section id="hero" class="hero">
+    <div class="hero__inner">
+
+      <!-- テキスト部分 -->
+      <div class="hero__content">
+
+        <!-- 小さいラベル（変えなくてOK） -->
+        <p class="hero__eyebrow">Portfolio — 2024</p>
+
+        <!-- メインの名前 -->
+        <h1 class="hero__name">
+          <!-- ↓ ここを自分の名前に変えてね（2箇所） -->
+          <span class="hero__name-ja">山田 太郎</span>
+          <span class="hero__name-en">Taro Yamada</span>
+          <!-- ↑ ここを変えてね -->
+        </h1>
+
+        <!-- キャッチコピー -->
+        <!-- ↓ ここを自分のキャッチコピーに変えてね -->
+        <p class="hero__tagline">「コードで世界を変えたい。」</p>
+        <!-- ↑ ここを変えてね -->
+
+        <!-- ボタン（Works へのリンクと Contact へのリンク） -->
+        <div class="hero__actions">
+          <a href="#works"   class="btn btn--primary">Works を見る</a>
+          <a href="#contact" class="btn btn--ghost">Contact</a>
+        </div>
+
+      </div>
+
+      <!-- 写真部分 -->
+      <div class="hero__visual">
+        <div class="hero__image-wrap">
+          <!-- ↓ 自分の写真を images/profile.jpg という名前で保存して差し替えてね -->
+          <img
+            src="images/profile.jpg"
+            alt="山田 太郎のプロフィール写真"
+            class="hero__image"
+            loading="lazy"
+          >
+          <!-- ↑ alt="〇〇のプロフィール写真" の〇〇も自分の名前に変えてね -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- スクロールを促すアニメーション（変えなくてOK） -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- =====================
+       About セクション
+       自己紹介・所属
+       ===================== -->
+  <section id="about" class="about section">
+    <div class="section__inner">
+
+      <!-- セクションラベル（変えなくてOK） -->
+      <div class="section__label">
+        <span class="section__number">01</span>
+        <span class="section__title-en">About</span>
+      </div>
+
+      <div class="about__grid">
+
+        <!-- 自己紹介テキスト -->
+        <div class="about__text">
+
+          <!-- ↓ ここを自分の挨拶に変えてね -->
+          <h2 class="about__heading">はじめまして。</h2>
+          <!-- ↑ ここを変えてね -->
+
+          <!-- ↓ ここを自分の自己紹介に変えてね -->
+          <p class="about__intro">
+            慶應義塾大学 理工学部 1年の山田太郎です。
+            Web制作サークル Lemon に所属し、フロントエンドを勉強中。
+            「コードで人の役に立てるものを作りたい」という気持ちでプログラミングを始めました。
+          </p>
+          <!-- ↑ ここを変えてね -->
+
+          <!-- 所属情報テーブル -->
+          <div class="about__meta">
+            <dl class="meta-list">
+              <!-- ↓ ここを自分の情報に変えてね（3行） -->
+              <div class="meta-list__item">
+                <dt>大学</dt>
+                <dd>慶應義塾大学</dd>
+              </div>
+              <div class="meta-list__item">
+                <dt>学部・学年</dt>
+                <dd>理工学部 1年</dd>
+              </div>
+              <div class="meta-list__item">
+                <dt>サークル</dt>
+                <dd>Web制作サークル Lemon</dd>
+              </div>
+              <!-- ↑ ここを変えてね -->
+            </dl>
+          </div>
+
+        </div>
+
+        <!-- 装飾用ブロック（見た目のアクセント。変えなくてOK） -->
+        <div class="about__deco" aria-hidden="true">
+          <div class="about__deco-box"></div>
+          <p class="about__deco-text">Keio<br>Univ.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================
+       Skills セクション
+       使えるツール・言語
+       ===================== -->
+  <section id="skills" class="skills section">
+    <div class="section__inner">
+
+      <!-- セクションラベル（変えなくてOK） -->
+      <div class="section__label">
+        <span class="section__number">02</span>
+        <span class="section__title-en">Skills</span>
+      </div>
+
+      <h2 class="section__heading">できること</h2>
+
+      <!-- スキルタグ一覧 -->
+      <!-- tag--primary（黄色）= 自信あり、tag--secondary（枠線）= 勉強中 -->
+      <!-- ↓ ここを自分のスキルに変えてね。タグを増やしたり減らしたりしてOK -->
+      <div class="skills__tags">
+        <span class="tag tag--primary">HTML</span>
+        <span class="tag tag--primary">CSS</span>
+        <span class="tag tag--secondary">Python</span>
+        <span class="tag tag--secondary">Git / GitHub</span>
+        <span class="tag tag--secondary">Figma</span>
+      </div>
+      <!-- ↑ ここを変えてね -->
+
+      <!-- 凡例（変えなくてOK） -->
+      <p class="skills__note">
+        <span class="tag-legend tag-legend--primary">■</span> 自信あり
+        <span class="tag-legend tag-legend--secondary">■</span> 勉強中
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- =====================
+       Works セクション
+       制作物の一覧（カード形式）
+       ===================== -->
+  <section id="works" class="works section">
+    <div class="section__inner">
+
+      <!-- セクションラベル（変えなくてOK） -->
+      <div class="section__label">
+        <span class="section__number">03</span>
+        <span class="section__title-en">Works</span>
+      </div>
+
+      <h2 class="section__heading">制作物</h2>
+
+      <!-- カードグリッド（2列。スマホは1列になる） -->
+      <div class="works__grid">
+
+        <!-- =====================
+             制作物カード 1
+             ↓ ここを自分の制作物に変えてね
+             ===================== -->
+        <article class="work-card">
+          <!-- サムネイル画像エリア -->
+          <!-- 画像を使う場合：↓ のコメントを外してパスを変えてね -->
+          <!-- <img src="images/work-01.jpg" alt="ポートフォリオサイト"> -->
+          <div class="work-card__thumb">
+            <div class="work-card__thumb-placeholder">
+              <!-- ↓ 短いタイトルや絵文字を入れてOK -->
+              <span>Portfolio</span>
+            </div>
+          </div>
+          <div class="work-card__body">
+            <!-- ↓ ここを自分の制作物のタイトルに変えてね -->
+            <h3 class="work-card__title">このポートフォリオサイト</h3>
+            <!-- ↓ ここを自分の制作物の説明に変えてね -->
+            <p class="work-card__desc">
+              Lemon のテンプレートをカスタマイズして作ったポートフォリオです。
+              初めて HTML / CSS を使って自分のサイトを作りました。
+            </p>
+            <!-- ↓ ここを使った技術のタグに変えてね -->
+            <div class="work-card__tags">
+              <span class="tag tag--sm">HTML</span>
+              <span class="tag tag--sm">CSS</span>
+            </div>
+          </div>
+        </article>
+        <!-- ↑ カード 1 ここまで -->
+
+        <!-- =====================
+             制作物カード 2
+             ↓ ここを自分の制作物に変えてね
+             ===================== -->
+        <article class="work-card">
+          <div class="work-card__thumb">
+            <div class="work-card__thumb-placeholder work-card__thumb-placeholder--dark">
+              <span>Lemon</span>
+            </div>
+          </div>
+          <div class="work-card__body">
+            <h3 class="work-card__title">Lemon 第2回課題</h3>
+            <p class="work-card__desc">
+              Lemon の第2回課題として制作したWebページ。
+              レスポンシブデザインに挑戦しました。
+            </p>
+            <div class="work-card__tags">
+              <span class="tag tag--sm">HTML</span>
+              <span class="tag tag--sm">CSS</span>
+              <span class="tag tag--sm">JavaScript</span>
+            </div>
+          </div>
+        </article>
+        <!-- ↑ カード 2 ここまで -->
+
+        <!-- カードを増やしたい場合は上の <article class="work-card"> から </article> をコピーして貼り付けてね -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================
+       Contact セクション
+       GitHubリンク・SNSリンク
+       ===================== -->
+  <section id="contact" class="contact section">
+    <div class="section__inner">
+
+      <!-- セクションラベル（変えなくてOK） -->
+      <div class="section__label">
+        <span class="section__number">04</span>
+        <span class="section__title-en">Contact</span>
+      </div>
+
+      <h2 class="section__heading">連絡先</h2>
+
+      <!-- ↓ ここを自分のメッセージに変えてね -->
+      <p class="contact__desc">
+        気軽に声をかけてください！<br>
+        コラボやフィードバックなど歓迎です。
+      </p>
+      <!-- ↑ ここを変えてね -->
+
+      <!-- リンクボタン一覧 -->
+      <div class="contact__links">
+
+        <!-- GitHub リンク -->
+        <!-- ↓ "yourname" を自分の GitHub ユーザー名に変えてね -->
+        <a href="https://github.com/yourname" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <!-- GitHub のアイコン（SVG。変えなくてOK） -->
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+        <!-- ↑ "yourname" を変えてね -->
+
+        <!-- X (Twitter) リンク -->
+        <!-- ↓ "yourname" を自分のXのユーザー名に変えてね。不要なら <a>〜</a> ごと削除してOK -->
+        <a href="https://x.com/yourname" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <!-- X のアイコン（SVG。変えなくてOK） -->
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.636 5.903-5.636Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          X (Twitter)
+        </a>
+        <!-- ↑ 不要なら削除してOK -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================
+       フッター
+       ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <!-- ↓ ここを自分の名前に変えてね -->
+      <p class="footer__copy">&copy; 2024 Taro Yamada</p>
+      <!-- ↑ ここを変えてね -->
+      <p class="footer__credit">Built with 🍋 Lemon Template</p>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript の読み込み（defer = HTML を全部読んでから実行） -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
