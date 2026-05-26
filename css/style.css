@@ -11,18 +11,17 @@
 :root {
 
   /* =============================
-     🎨 カラー設定
-     ここを変えると全体の色が変わります
+     🎨 カラー設定（爽やかなスカイブルー＆サクラピンク）
      ============================= */
-  --color-primary:      #F5C518;   /* メインカラー（黄色：Lemonカラー） */
-  --color-primary-dark: #D4A800;   /* ホバー時の黄色（少し濃く） */
-  --color-accent:       #1C1C1E;   /* アクセントカラー（ほぼ黒） */
-  --color-bg:           #FFFEF5;   /* 背景色（ほんのり黄みのある白） */
-  --color-bg-alt:       #F5F4EE;   /* セクション背景色（交互に使う） */
-  --color-text:         #1C1C1E;   /* 本文テキスト色 */
-  --color-text-muted:   #888888;   /* サブテキスト・説明文の色 */
+  --color-primary:      #74C0FC;   /* 爽やかなスカイブルー */
+  --color-primary-dark: #4DABF7;   /* 少し濃いブルー */
+  --color-accent:       #FFD1DC;   /* サクラピンク */
+  --color-bg:           #F8F9FA;   /* ヌケ感のある白 */
+  --color-bg-alt:       #F1F3F5;   /* 薄いグレーブルー */
+  --color-text:         #212529;   /* ダークグレー */
+  --color-text-muted:   #868E96;   /* サブテキスト */
   --color-card-bg:      #FFFFFF;   /* カード背景色 */
-  --color-border:       #E8E7DF;   /* 枠線の色 */
+  --color-border:       #DEE2E6;   /* 枠線の色 */
 
   /* =============================
      📝 フォント設定
@@ -45,6 +44,40 @@
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 }
+
+
+/* =============================================
+   🌸 桜の花びらアニメーション設定
+   ============================================= */
+.sakura-petal {
+  position: fixed;
+  top: -20px;
+  background-color: #ffd1dc;
+  border-radius: 100% 0 100% 100% / 100% 0 100% 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.8;
+  box-shadow: 0 0 5px rgba(255, 209, 220, 0.5);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 50px;
+  }
+}
+
 
 
 /* =============================================
@@ -114,7 +147,7 @@ ul {
   font-style: italic;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-primary-dark);
+  color: var(--color-primary);
   letter-spacing: 0.05em;
 }
 
@@ -135,7 +168,7 @@ ul {
   top: 50%;
   width: 16px;
   height: 1px;
-  background: var(--color-text-muted);
+  background: var(--color-accent);
 }
 
 /* セクション見出し（h2） */
@@ -242,7 +275,7 @@ ul {
 
 /* スクロール後に背景が出る（js/main.js が .header--scrolled を付与） */
 .header--scrolled {
-  background-color: rgba(255, 254, 245, 0.90);
+  background-color: rgba(248, 249, 250, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--color-border);
